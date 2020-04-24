@@ -1,0 +1,29 @@
+<html lang="en">
+
+<head>
+  <base href="/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>{{htmlWebpackPlugin.options.title}}</title>
+
+  {{#each htmlWebpackPlugin.options.files.css}}
+  <link href="{{this}}" rel="stylesheet" />
+  {{/each}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <link rel="icon" type="image/jpg" href="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" />
+  <link rel="apple-touch-icon" href="https://cdn.worldvectorlogo.com/logos/angular-icon.svg" />
+</head>
+
+<body ng-app="myApp">
+  
+  <div ng-view></div>
+
+  {{#each htmlWebpackPlugin.options.files.js}}
+  <script src="{{this}}" type="text/javascript"></script>
+  {{/each}}
+  
+</body>
+
+</html>

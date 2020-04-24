@@ -1,0 +1,19 @@
+<div class="topnav" id="myTopnav">
+  <a href=""  ng-click=logout()>Logout</a>
+  <input
+    type="text"
+    id="searchBox"
+    placeholder="Search on all Repositories"
+    class="mt-2 col-md-5"
+    ng-model="$root.questionAll"
+    ng-keyup="$event.keyCode == 13 ? search() : null"
+  />
+  <a href="/dashboard">Dashboard</a>
+
+  <div ng-include="templates[0]"></div>
+
+  <a href="/gist/{{username}}">Gist</a>
+
+
+  <a style="font-size: 15px;" class="icon" ng-click="toggelHeader()">&#9776;</a>
+</div>

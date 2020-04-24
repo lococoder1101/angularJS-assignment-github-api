@@ -1,0 +1,39 @@
+<header></header>
+<div class="container my-4">
+  <a
+    type="button"
+    class="btn btn-outline-secondary my-3"
+    ng-href="/gist/{{user}}"
+  >
+    Back to gists
+  </a>
+  <div>
+    <input
+      type="text"
+      placeholder="Gist description..."
+      class="form-control my-2 w-100"
+      ng-model="data.description"
+    />
+    <div>
+      <input
+        type="text"
+        placeholder="Filename  including extension..."
+        class="form-control my-2 w-100"
+        ng-model="data.filename"
+      />
+      <textarea
+        ng-model="data.fileContent"
+        class="form-control"
+        style="max-height: 443px; height: 874px;"
+      >
+      </textarea>
+      
+      <a
+      ng-click="setGist()"
+      type="button"
+      class="btn btn-success my-2 text-white float-right"
+      >
+      Submit
+    </a>
+  </div>
+</div>

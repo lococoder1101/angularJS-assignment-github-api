@@ -1,0 +1,96 @@
+#dashboard {
+  ul {
+    li {
+      background-color: transparent;
+      :hover {
+        background-color: #fffafa;
+      }
+    }
+  }
+
+  .custom-select {
+    background: none;
+  }
+
+  .search {
+    border-radius: 3px;
+    padding: 5px;
+    margin: 8px;
+  }
+
+  .card {
+    min-height: 400px;
+    border: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 280;
+    margin: 0 auto;
+    font-family: arial;
+    img {
+      width: 100%;
+    }
+  }
+
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  a {
+    cursor: pointer;
+    color: rgb(2, 27, 65);
+  }
+
+  button:hover,
+  a:hover {
+    opacity: 0.7;
+  }
+
+  .list-group-horizontal-lg {
+    li {
+      padding-right: 20px;
+    }
+  }
+}
+// searchBox
+#searchBox {
+  width: 250px;
+  font-size: 13px;
+  background-color: #24292e;
+  border: grey;
+  color: white;
+  padding: 8px 15px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  &:focus {
+    outline: none !important;
+    border: 1px solid #555555;
+    box-shadow: 0 0 0px #888888;
+    width: 100%;
+  }
+}
+::placeholder {
+  color: #cccccc;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #cccccc;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #cccccc;
+}
