@@ -1,5 +1,6 @@
 import './theme/base.scss';
 import angular from 'angular';
+import ngSanitize from 'angular-sanitize';
 import { ngRoute, $routeProvider } from 'angular-route';
 import { translate, $translateProvider } from 'angular-translate';
 import homeController from './scripts/controllers/home';
@@ -16,7 +17,11 @@ import routing from './scripts/config';
 import translation from './scripts/translation';
 import githubService from './scripts/services';
 
-const app = angular.module('myApp', ['ngRoute', 'pascalprecht.translate']);
+const app = angular.module('myApp', [
+  'ngRoute',
+  'pascalprecht.translate',
+  'ngSanitize',
+]);
 
 app.controller('homeController', homeController);
 app.controller('dashboardController', dashboardController);

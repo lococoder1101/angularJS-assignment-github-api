@@ -109,7 +109,15 @@
     <li ng-if="repo.parent" class="list-group-item list-header">
       <small> {{repo.parent.owner.login}} create {{repo.name}}</small>
     </li>
-    <li ng-repeat="content in  data track by $index" class="list-group-item">
+    <li ng-if="isBlob" class="list-group-item">
+      <div ng-bind-html="blob.content"></div>
+    </li>
+
+    <li
+      ng-if="!isBlob"
+      ng-repeat="content in  data track by $index"
+      class="list-group-item"
+    >
       <svg
         ng-if="content.type === 'dir'"
         aria-label="directory"
@@ -146,7 +154,10 @@
       >
         <small>{{content.name}}</small>
       </a>
-      <a ng-if="content.type === 'file'">
+      <a
+        ng-if="content.type === 'file'"
+        ng-href="/repository/{{user}}/{{name}}/blob/{{content.path}}"
+      >
         <small>{{content.name}}</small>
       </a>
     </li>

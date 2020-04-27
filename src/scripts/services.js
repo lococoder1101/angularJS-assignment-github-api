@@ -75,7 +75,7 @@ export class githubService {
 
   storeToken = (username, password) => {
     let auth = `Basic ${btoa(`${username}:${password}`)}`;
-    const tokenLifespan = 3000 * 1000;
+    const tokenLifespan = 20000 * 1000;
     this.setCookie('access_token', auth, tokenLifespan);
     this.setCookie('user', username, tokenLifespan);
   };
@@ -85,7 +85,7 @@ export class githubService {
     return cookie ? cookie[2] : null;
   }
 
-  setCookie = (name, value, duration=60000) => {
+  setCookie = (name, value, duration = 20000) => {
     const now = new Date();
     now.setTime(now.getTime() + duration);
     document.cookie = `${name}=${value};path=/;expires=${now.toUTCString()}`;

@@ -32,6 +32,10 @@ export const routing = ($routeProvider, $locationProvider) => {
       template: repositoryTemplate,
       controller: 'repositoryController',
     })
+    .when('/repository/:user/:name/blob/:filePath*', {
+      template: repositoryTemplate,
+      controller: 'repositoryController',
+    })
     .when('/repository/:user/:name/issues', {
       template: issueTemplate,
       controller: 'issueController',
