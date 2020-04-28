@@ -26,8 +26,10 @@ Clone the angularJS-assignment repository using git:
     cd angularjs-assignment
 
 ## **Install Dependencies**
- Run npm install to install project dependencies.
 
+     npm install 
+
+ to install project dependencies.
 ## Run the Application
 **You can simply do:**
 
