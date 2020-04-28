@@ -16,7 +16,7 @@ Check the version of Node.js that you have installed by running the following co
 
     node --version
 
-**Install Git**
+### Install Git
 need git to clone the angular-seed repository. You can get git from [here](https://git-scm.com/).
 
 Clone the angularJS-assignment repository using git:
