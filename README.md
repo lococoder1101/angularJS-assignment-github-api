@@ -1,6 +1,6 @@
 # **AngularJS assignment**
 
-This project is my assignment to implement some GitHub API features using angularJS.
+This project is my assignment to implement some GitHub API features using angularJS for sadad informatic corporation
 
 
 # **Getting Started**
